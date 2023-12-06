@@ -11,6 +11,12 @@ app.get("/", function (req, res) {
   res.send("Hello from app.js!");
 });
 
+app.get("/hello", function (req, res) {
+  // res.set("Content-Type", "text/plain");
+  res.type("text"); // same as above
+  res.send("You visited the Hello Route!");
+});
+
 app.get("/hello/:name", function (req, res) {
   // res.set("Content-Type", "text/plain");
   res.type("text"); // same as above
