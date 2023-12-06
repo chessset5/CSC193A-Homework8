@@ -7,10 +7,21 @@ const app = express();
 app.use(express.static("public"));
 const PORT = process.env.PORT || 8000;
 
-app.get("/hello", function (req, res) {
+app.get("/", function (req, res) {
+  res.send("Hello from app.js!");
+});
+
+app.get("/hello/:name", function (req, res) {
   // res.set("Content-Type", "text/plain");
   res.type("text"); // same as above
-  res.send("Hello World!");
+  res.send("Hello " + req.params.name + "!");
+});
+
+app.get("/states/:state/cities/:city", function (req, res) {
+  res.type("text");
+  res.send(
+    "You sent a request for " + req.params.city + ", " + req.params.state
+  );
 });
 
 app.listen(PORT, () => {
