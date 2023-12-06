@@ -20,6 +20,7 @@ app.get("/hello", function (req, res) {
 app.get("/hello/:name", function (req, res) {
   // res.set("Content-Type", "text/plain");
   res.type("text"); // same as above
+  // prints out name to screen
   res.send("Hello " + req.params.name + "!");
 });
 
