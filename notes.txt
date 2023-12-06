@@ -1,0 +1,2 @@
+to add nodemon locally
+    $npm install nodemon --save-dev
