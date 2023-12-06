@@ -14,6 +14,16 @@ app.get("/", function (req, res) {
   res.send("Hello from app.js!");
 });
 
+// exercise 1
+app.get("/math/circle/:r", function (req, res) {
+  // http://localhost:8000/math/circle/r
+  let radius = req.params.r;
+  let area = Math.PI * radius * radius;
+  let cir = Math.PI * radius * 2;
+  res.type("json");
+  res.send(`{ area: ${area.toFixed(2)}, circumference: ${cir.toFixed(2)} }`);
+});
+
 app.get("/hello", function (req, res) {
   // res.set("Content-Type", "text/plain");
   res.type("text"); // same as above
@@ -36,6 +46,8 @@ app.get("/hello/:name", function (req, res) {
 app.get("/hello/name/:first/:last", function (req, res) {
   let firstName = req.params["first"];
   let lastName = req.params["last"];
+  res.type("text");
+  res.send(`${firstName} ${lastName}`);
 });
 
 app.get("/states/:state/cities/:city", function (req, res) {
