@@ -21,14 +21,22 @@ app.get("/hello/:name", function (req, res) {
   // res.set("Content-Type", "text/plain");
   res.type("text"); // same as above
   // prints out name to screen
+  // example http://localhost:8000/hello/aaron
   res.send("Hello " + req.params.name + "!");
 });
 
 app.get("/states/:state/cities/:city", function (req, res) {
+  // example http://localhost:8000/states/ca/cities/sac
   res.type("text");
   res.send(
     "You sent a request for " + req.params.city + ", " + req.params.state
   );
+});
+
+app.get("/cityInfo", function (req, res) {
+  let state = req.query.state; // wa
+  let city = req.query.city; // Seattle
+  // do something with variables in the response
 });
 
 app.listen(PORT, () => {
