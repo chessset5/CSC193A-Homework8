@@ -1,0 +1,19 @@
+{
+  "name": "csc193a-homework8",
+  "version": "1.0.0",
+  "description": "Homework 8 for CSC 193A web design at CSUS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chessset5/CSC193A-Homework8.git"
+  },
+  "author": "Aaron Shackelford",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chessset5/CSC193A-Homework8/issues"
+  },
+  "homepage": "https://github.com/chessset5/CSC193A-Homework8#readme"
+}
