@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/chessset5/CSC193A-Homework8/issues"
   },
-  "homepage": "https://github.com/chessset5/CSC193A-Homework8#readme"
+  "homepage": "https://github.com/chessset5/CSC193A-Homework8#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2"
+  }
 }
