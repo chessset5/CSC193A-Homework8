@@ -34,9 +34,16 @@ app.get("/states/:state/cities/:city", function (req, res) {
 });
 
 app.get("/cityInfo", function (req, res) {
-  let state = req.query.state; // wa
-  let city = req.query.city; // Seattle
-  // do something with variables in the response
+  // I have not idea how to make this work...
+  let state = req.query.state; // eg wa
+  let city = req.query.city; // eg Seattle
+  if (!(state && city)) {
+    res
+      .status(400)
+      .send("Error: Missing required city and state query parameters.");
+  } else {
+    res.send("You sent a request for " + city + ", " + state);
+  }
 });
 
 app.listen(PORT, () => {
